@@ -72,7 +72,7 @@ export class LoginPage implements OnInit {
       10,
       '10101010-0',
       'carlos@confiteria.cl',
-      'Carlos',
+      'Carloos',
       'Gómez',
       'WORKER',
       true,
@@ -133,6 +133,7 @@ export class LoginPage implements OnInit {
         let userInfoSend: NavigationExtras = {
           state: {
             user: this.listUser[i]
+
           }
         }
         if(this.listUser[i].user_type == 'WORKER'){
