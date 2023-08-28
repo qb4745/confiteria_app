@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Admin Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+  <h1 class="center-content" style="padding-bottom: 50px">
+    Welcome {{ adminInfoReceived?.name }}
+  </h1>
+  <ion-list [inset]="true">
+    <ion-list-header>
+      <ion-label>User Information: </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Username: {{ adminInfoReceived?.username }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Name: {{ adminInfoReceived?.name }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Last Name: {{ adminInfoReceived?.last_name }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>User Type: {{ adminInfoReceived?.user_type }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email: {{ adminInfoReceived?.email }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>RUT: {{ adminInfoReceived?.rut }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Phone: {{ adminInfoReceived?.phone }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Address: {{ adminInfoReceived?.address }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" color="success" (click)="goToProductList()"
+    >Ir a Listado de Productos</ion-button
+  >
+</ion-content>

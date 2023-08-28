@@ -18,16 +18,12 @@ export const routes: Routes = [
     path: 'admin',
     loadComponent: () => import('./admin/admin.page').then( m => m.AdminPage)
   },
+    {
+    path: '**',
+    redirectTo: 'login'
+  },
   {
     path: 'registrar',
     loadComponent: () => import('./registrar/registrar.page').then( m => m.RegistrarPage)
   },
-  {
-    path: 'productlist',
-    loadComponent: () => import('./admin/productlist/productlist.page').then( m => m.ProductlistPage)
-  },
-  {
-    path: '**',
-    redirectTo: 'login'
-  }
 ];
